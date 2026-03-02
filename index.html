@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Développement Personnel – DévPerso | Transformez Votre Potentiel</title>
+    <meta name="description" content="Votre plateforme complète de développement personnel. Défiez-vous avec des challenges quotidiens, recevez des citations inspirantes et des affirmations positives. Commencez votre transformation maintenant!">
+    <meta name="keywords" content="développement personnel, motivation, citation inspirante, affirmation positive, challenge, bien-être, confiance en soi, meditation, mindfulness, croissance personnelle">
+    <meta name="author" content="DévPerso">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="French">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devperso.fr/">
+    <meta property="og:title" content="DévPerso - Transformez Votre Potentiel">
+    <meta property="og:description" content="Votre plateforme complète de développement personnel. Challenges, citations inspirantes et affirmations positives.">
+    <meta property="og:image" content="https://devperso.fr/images/og-image.jpg">
+    <meta property="og:site_name" content="DévPerso">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://devperso.fr/">
+    <meta name="twitter:title" content="DévPerso - Transformez Votre Potentiel">
+    <meta name="twitter:description" content="Votre plateforme complète de développement personnel. Challenges, citations inspirantes et affirmations positives.">
+    <meta name="twitter:image" content="https://devperso.fr/images/og-image.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://devperso.fr/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="accessibility.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "DévPerso",
+        "url": "https://devperso.fr",
+        "description": "Plateforme de développement personnel avec citations inspirantes, affirmations positives et challenges quotidiens",
+        "author": {
+            "@type": "Organization",
+            "name": "DévPerso"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://devperso.fr/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <!-- Structured Data for Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "DévPerso",
+        "url": "https://devperso.fr",
+        "logo": "https://devperso.fr/images/logo.png",
+        "description": "Plateforme de développement personnel pour vous aider à atteindre votre plein potentiel",
+        "sameAs": [
+            "https://facebook.com/devperso",
+            "https://instagram.com/devperso",
+            "https://twitter.com/devperso"
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="index.html">
+            <i class="fas fa-brain me-2"></i>DévPerso
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="challenges.html">Challenges</a></li>
+                <li class="nav-item"><a class="nav-link" href="citation.html">Citations</a></li>
+                <li class="nav-item"><a class="nav-link" href="affirmations.html">Affirmations</a></li>
+                <li class="nav-item"><a class="nav-link" href="favorites.html">Favoris</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Tableau de bord</a></li>
+                <li class="nav-item" id="authButtons">
+                    <a class="btn btn-outline-light btn-sm ms-2" href="connexion.html">
+                        <i class="fas fa-sign-in-alt me-1"></i>Connexion
+                    </a>
+                    <a class="btn btn-primary btn-sm ms-1" href="inscription.html">
+                        <i class="fas fa-user-plus me-1"></i>Inscription
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-card">
+                    <span class="badge bg-primary mb-3">🚀 Bienvenue sur DévPerso</span>
+                    <h1 class="display-3 fw-bold mb-4">Transformez Votre <span class="text-gradient">Potentiel</span></h1>
+                    <p class="lead mb-4">Découvrez une plateforme complète pour votre développement personnel. Accédez à des challenges quotidiens, des citations inspirantes et des affirmations positives.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="challenges.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-rocket me-2"></i>Démarrer maintenant
+                        </a>
+                        <a href="citation.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-quote-left me-2"></i>Voir les citations
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                <div class="feature-icon mx-auto animate-float" style="width: 150px; height: 150px; font-size: 3rem;">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3 class="mt-4 fw-bold hero-title">Commencez Votre Voyage</h3>
+                <p class="hero-subtext">Chaque grand voyage commence par un seul pas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="stat-item">
+                    <i class="fas fa-quote-left fa-3x mb-3"></i>
+                    <h3 class="fw-bold">100+</h3>
+                    <p class="stat-text">Citations Inspirantes</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-item">
+                    <i class="fas fa-tasks fa-3x mb-3"></i>
+                    <h3 class="fw-bold">50+</h3>
+                    <p class="text-muted">Challenges</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-item">
+                    <i class="fas fa-users fa-3x mb-3"></i>
+                    <h3 class="fw-bold">1000+</h3>
+                    <p class="text-muted">Utilisateurs Actifs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quote of the Day -->
+<section class="py-5">
+    <div class="container">
+        <div class="quote-of-day">
+            <h2 class="display-4 fw-bold mb-3">Citation du Jour</h2>
+            <div class="quote-display">
+                <blockquote class="blockquote mb-0">
+                    <p class="h3 fw-semibold" id="daily-quote">"Le succès c'est d'aller d'échec en échec sans perdre son enthousiasme."</p>
+                    <footer class="blockquote-footer mt-3">Winston Churchill</footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-4 fw-bold">Pourquoi Ce Site ?</h2>
+            <p class="lead text-muted">Une approche complète du développement personnel</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>Croissance Mentale</h4>
+                    <p class="text-muted">Développez une mentalité positive avec nos affirmations quotidiennes et exercices de mindfulness.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h4>Objectifs Clairs</h4>
+                    <p class="text-muted">Définissez et atteignez vos objectifs grâce à nos challenges structurés et suivis de progression.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Bien-être Global</h3>
+                    <p class="text-muted">Améliorez votre confiance en vous et votre équilibre de vie avec nos ressources spécialisées.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Inspirational Quotes Carousel -->
+<section class="citations-inspirantes-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-4 fw-bold section-title">Citations Inspirantes</h2>
+            <p class="lead section-subtitle">Découvrez nos citations préférées pour vous inspirer</p>
+        </div>
+        <div id="quoteCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="citation-card">
+                        <blockquote class="blockquote">
+                            <p>"La seule façon de faire du bon travail est d'aimer ce que vous faites."</p>
+                            <footer class="blockquote-footer">Steve Jobs</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="citation-card">
+                        <blockquote class="blockquote">
+                            <p>"Le succès n'est pas final, l'échec n'est pas fatal : c'est le courage de continuer qui compte."</p>
+                            <footer class="blockquote-footer">Winston Churchill</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="citation-card">
+                        <blockquote class="blockquote">
+                            <p>"Le futur appartient à ceux qui croient à la beauté de leurs rêves."</p>
+                            <footer class="blockquote-footer">Eleanor Roosevelt</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#quoteCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#quoteCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="cta-box">
+            <h2 class="display-4 fw-bold mb-4">Prêt à Commencer ?</h2>
+            <p class="lead mb-4">Rejoignez notre communauté et commencez votre transformation personnelle dès aujourd'hui.</p>
+            <a href="inscription.html" class="btn btn-light btn-lg">
+                <i class="fas fa-user-plus me-2"></i>Créer un compte gratuitement
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" style="clear: both;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <h5 class="fw-bold mb-3">DévPerso</h5>
+                <p class="text-white-50">Votre partenaire pour le développement personnel. Ensemble, construisons la meilleure version de vous-même.</p>
+            </div>
+            <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-3">Navigation</h6>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="challenges.html">Challenges</a></li>
+                    <li><a href="citation.html">Citations</a></li>
+                    <li><a href="affirmations.html">Affirmations</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-3">Compte</h6>
+                <ul class="footer-links">
+                    <li><a href="connexion.html">Connexion</a></li>
+                    <li><a href="inscription.html">Inscription</a></li>
+                    <li><a href="dashboard.html">Tableau de bord</a></li>
+                    <li><a href="favorites.html">Favoris</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                <h6 class="fw-bold mb-3">Légal</h6>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Confidentialité</a></li>
+                    <li><a href="terms.html">Conditions</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4">
+                <h6 class="fw-bold mb-3">Contact</h6>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Nous contacter</a></li>
+                    <li><a href="a propos.html">À propos</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-4 border-secondary">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+                <p class="mb-0 text-white-50">© 2026 DévPerso – Tous droits réservés</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <p class="mb-0 text-white-50">Fait avec <i class="fas fa-heart text-danger"></i> pour vous</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Skip to main content link for accessibility -->
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<!-- Dark Mode Toggle -->
+<div class="dark-mode-toggle">
+    <button id="darkModeBtn" class="btn" onclick="toggleDarkMode()" aria-label="Basculer le mode sombre">
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="auth.js"></script>
+<script src="i18n.js"></script>
+<script src="darkmode.js"></script>
+<script src="utils.js"></script>
+<script>
+    // Quote of the day
+    const quotes = [
+        { text: "Le succès c'est d'aller d'échec en échec sans perdre son enthousiasme.", author: "Winston Churchill" },
+        { text: "La seule façon de faire du bon travail est d'aimer ce que vous faites.", author: "Steve Jobs" },
+        { text: "Le succès n'est pas final, l'échec n'est pas fatal : c'est le courage de continuer qui compte.", author: "Winston Churchill" },
+        { text: "Le futur appartient à ceux qui croient à la beauté de leurs rêves.", author: "Eleanor Roosevelt" },
+        { text: "Le最大的敌人是自己.", author: "Proverbe chinois" },
+        { text: "Chaque jour est une nouvelle opportunité de changer votre vie.", author: "Inconnu" },
+        { text: "La confiance en soi est le premier secret du succès.", author: "Ralph Waldo Emerson" }
+    ];
+
+    function loadDailyQuote() {
+        const today = new Date();
+        const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+        const quoteIndex = dayOfYear % quotes.length;
+        const quote = quotes[quoteIndex];
+        
+        const quoteElement = document.getElementById('daily-quote');
+        if (quoteElement) {
+            quoteElement.textContent = `"${quote.text}"`;
+            quoteElement.nextElementSibling.textContent = quote.author;
+        }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+        loadDailyQuote();
+        
+        // Update auth buttons if user is logged in
+        if (typeof updateAuthUI === 'function') {
+            updateAuthUI();
+        }
+    });
+</script>
+</body>
+</html>

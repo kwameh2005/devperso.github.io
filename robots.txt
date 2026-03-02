@@ -1,0 +1,16 @@
+# robots.txt for DévPerso
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://devperso.fr/sitemap.xml
+
+# Disallow admin or private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_nuxt/
+Disallow: /assets/
+
+# Crawl-delay (optional, for polite crawling)
+Crawl-delay: 1

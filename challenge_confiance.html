@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Confiance en soi – 10 jours</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">DévPerso</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="challenges.html">Challenges</a></li>
+                    <li class="nav-item"><a class="nav-link" href="citation.html">Citations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favoris</a></li>
+                    <li class="nav-item"><a class="nav-link" href="affirmations.html">Affirmations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Tableau de bord</a></li>
+                    <li class="nav-item"><a class="nav-link" href="a propos.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<div class="container py-5">
+    <h1 class="text-center mb-4">Challenge Confiance en soi – 10 jours</h1>
+    <p class="lead text-center">Renforce ton estime, ton assurance et ton courage.</p>
+    <hr>
+
+    <h3>Jour 1</h3>
+    <p>Écris 5 qualités que tu apprécies chez toi.</p>
+
+    <h3>Jour 2</h3>
+    <p>Fais une petite action que tu repousses depuis longtemps.</p>
+
+    <h3>Jour 3</h3>
+    <p>Complimente-toi pour 3 choses que tu as bien faites aujourd'hui.</p>
+
+    <h3>Jour 4</h3>
+    <p>Identifie une peur et écris pourquoi elle ne te définit pas.</p>
+
+    <h3>Jour 5</h3>
+    <p>Fais un acte de courage, même petit.</p>
+
+    <h3>Jour 6</h3>
+    <p>Note 3 réussites dont tu es fier.</p>
+
+    <h3>Jour 7</h3>
+    <p>Fais quelque chose qui te met légèrement hors de ta zone de confort.</p>
+
+    <h3>Jour 8</h3>
+    <p>Écris une affirmation positive et répète-la 10 fois.</p>
+
+    <h3>Jour 9</h3>
+    <p>Prends soin de toi : repos, soin, activité agréable.</p>
+
+    <h3>Jour 10</h3>
+    <p>Écris une lettre à ton "toi du futur" rempli de confiance.</p>
+</div>
+
+<footer class="footer bg-dark text-white text-center py-3">
+    © 2026 DévPerso – Développement Personnel
+    <div class="quote-widget text-center py-2">
+        <p id="widgetQuote" class="mb-0"></p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const widgetQuotes = [
+    "Tu es capable de grandes choses.",
+    "Chaque jour est une nouvelle opportunité.",
+    "La constance bat le talent.",
+    "Tu mérites le bonheur.",
+    "Continue, tu es sur la bonne voie."
+];
+document.getElementById("widgetQuote").innerText =
+    widgetQuotes[Math.floor(Math.random() * widgetQuotes.length)];
+</script>
+
+</body>
+</html>

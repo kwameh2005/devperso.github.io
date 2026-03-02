@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Développement Personnel | DévPerso</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="index.html">
+            <i class="fas fa-brain me-2"></i>DévPerso
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="challenges.html">Challenges</a></li>
+                <li class="nav-item"><a class="nav-link" href="citation.html">Citations</a></li>
+                <li class="nav-item"><a class="nav-link" href="favorites.html">Favoris</a></li>
+                <li class="nav-item"><a class="nav-link" href="affirmations.html">Affirmations</a></li>
+                <li class="nav-item"><a class="nav-link" href="dashboard.html">Tableau de bord</a></li>
+                <li class="nav-item"><a class="nav-link" href="a propos.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-section d-flex align-items-center" style="min-height: 40vh; padding: 120px 0 50px;">
+    <div class="container">
+        <h1 class="display-3 fw-bold text-center mb-3">
+            <span class="text-gradient">Contact</span>
+        </h1>
+        <p class="lead text-white-50 text-center">Une question, une suggestion ou une collaboration ? Je suis à ton écoute.</p>
+    </div>
+</header>
+
+<!-- Contact Form Section -->
+<section class="container py-5 mt-n4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-elegant rounded-xl p-md-5 p-4" style="background: white; border: none;">
+                <h2 class="fw-bold mb-4">
+                    <i class="fas fa-envelope me-2" style="color: var(--primary);"></i>
+                    Me contacter
+                </h2>
+                <p class="text-muted mb-4">
+                    Tu peux me joindre directement via ce formulaire.<br>
+                    Je réponds généralement sous 24 à 48 heures.
+                </p>
+
+                <form class="contact-form" method="POST" onsubmit="return handleSubmit(event)">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Nom</label>
+                        <input type="text" name="name" required class="form-control" placeholder="Ton nom" 
+                            style="border-radius: var(--radius-lg); padding: 0.875rem; border: 2px solid var(--gray-200);">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Email</label>
+                        <input type="email" name="email" required class="form-control" placeholder="ton@email.com"
+                            style="border-radius: var(--radius-lg); padding: 0.875rem; border: 2px solid var(--gray-200);">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Message</label>
+                        <textarea name="message" rows="5" required class="form-control" placeholder="Ton message..."
+                            style="border-radius: var(--radius-lg); padding: 0.875rem; border: 2px solid var(--gray-200);"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg px-5 mt-2">
+                        <i class="fas fa-paper-plane me-2"></i>Envoyer
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info Cards -->
+            <div class="row mt-4 g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm rounded-xl p-4" style="border: none;">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Email</h5>
+                                <p class="text-muted mb-0">francgomes272005@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm rounded-xl p-4" style="border: none;">
+                        <div class="d-flex align-items-center">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold mb-1">Localisation</h5>
+                                <p class="text-muted mb-0">Thiès, Sénégal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <h5 class="fw-bold mb-4">Suivez-nous sur les réseaux sociaux</h5>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="https://facebook.com" target="_blank" class="btn btn-outline-primary btn-lg rounded-circle">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="btn btn-outline-danger btn-lg rounded-circle">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="btn btn-outline-info btn-lg rounded-circle">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h4 class="fw-bold mb-4 text-center">Questions Fréquentes</h4>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item" style="border: none; margin-bottom: 10px;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Comment puis-je commencer sur DévPerso ?
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Il suffit de créer un compte gratuitement ! Cliquez sur "Inscription" et suivez les étapes.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" style="border: none;">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Les services sont-ils payants ?
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Non, tous nos services sont gratuits !
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">© 2026 DévPerso – Tous droits réservés</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="privacy.html" class="text-white-50 me-3">Confidentialité</a>
+                <a href="terms.html" class="text-white-50 me-3">Conditions</a>
+                <a href="cookies.html" class="text-white-50">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+    
+    alert(`Merci ${name} ! Ton message a été envoyé. Je te répondrai à ${email} sous 24-48h.`);
+    form.reset();
+    return false;
+}
+</script>
+
+</body>
+</html>

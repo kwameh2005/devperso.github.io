@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favoris – Citations</title>
+    <meta name="description" content="Vos citations favorites DévPerso">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="index.html">
+            <i class="fas fa-brain me-2"></i>DévPerso
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto align-items-center" id="navMenu">
+                <li class="nav-item"><a class="nav-link px-3" href="index.html">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="challenges.html">Challenges</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="citation.html">Citations</a></li>
+                <li class="nav-item"><a class="nav-link px-3 active" href="favorites.html">Favoris</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="affirmations.html">Affirmations</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="dashboard.html">Tableau de bord</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="a propos.html">À propos</a></li>
+                <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
+                <li class="nav-item" id="authButtons">
+                    <a class="btn btn-outline-light btn-sm ms-2" href="connexion.html">
+                        <i class="fas fa-sign-in-alt me-1"></i>Connexion
+                    </a>
+                    <a class="btn btn-primary btn-sm ms-1" href="inscription.html">
+                        <i class="fas fa-user-plus me-1"></i>Inscription
+                    </a>
+                </li>
+                <li class="nav-item dropdown d-none" id="userDropdown">
+                    <a class="nav-link dropdown-toggle btn btn-outline-light btn-sm ms-2" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="fas fa-user me-1"></i><span id="userNameDisplay">Mon Compte</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="dashboard.html"><i class="fas fa-tachometer-alt me-2"></i>Tableau de bord</a></li>
+                        <li><a class="dropdown-item" href="favorites.html"><i class="fas fa-heart me-2"></i>Mes Favoris</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#" onclick="handleLogout()"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-5 mt-4">
+    <div class="container py-5">
+        <div class="welcome-section mb-5">
+            <h1 class="display-4 fw-bold mb-2">
+                <span class="text-gradient">Mes citations favorites</span>
+            </h1>
+            <p class="lead text-muted">Cliquez sur le bouton rouge pour retirer une citation de vos favoris.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="favorites-card p-4 rounded-4">
+                    <ul id="favList" class="list-group list-group-flush"></ul>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-danger" onclick="clearAllFavorites()">
+                            <i class="fas fa-trash me-2"></i>Supprimer tous les favoris
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer bg-dark text-white py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0">© 2026 DévPerso – Tous droits réservés</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="privacy.html" class="text-white-50 me-3">Confidentialité</a>
+                <a href="terms.html" class="text-white-50 me-3">Conditions</a>
+                <a href="cookies.html" class="text-white-50">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="auth.js"></script>
+<script src="i18n.js"></script>
+<script src="darkmode.js"></script>
+<script>
+function loadFavorites() {
+    const favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+    const list = document.getElementById("favList");
+
+    if (favs.length === 0) {
+        list.innerHTML = "<li class='list-group-item text-center py-4 text-muted'><i class='fas fa-heart fa-2x mb-3 d-block' style='opacity: 0.3;'></i>Aucun favori pour le moment.</li>";
+    } else {
+        list.innerHTML = "";
+        favs.forEach((q, index) => {
+            list.innerHTML += `
+                <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                    <span>${q}</span>
+                    <button class="btn btn-sm btn-outline-danger" onclick="removeFavorite(${index})">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </li>
+            `;
+        });
+    }
+}
+
+function removeFavorite(index) {
+    let favs = JSON.parse(localStorage.getItem("favorites") || "[]");
+    favs.splice(index, 1);
+    localStorage.setItem("favorites", JSON.stringify(favs));
+    loadFavorites();
+    alert("Citation retirée des favoris !");
+}
+
+function clearAllFavorites() {
+    if (confirm("Voulez-vous vraiment supprimer tous les favoris ?")) {
+        localStorage.setItem("favorites", JSON.stringify([]));
+        loadFavorites();
+        alert("Tous les favoris ont été supprimés !");
+    }
+}
+
+// Update auth UI
+function updateAuthUI() {
+    const user = getCurrentUser();
+    const authButtons = document.getElementById('authButtons');
+    const userDropdown = document.getElementById('userDropdown');
+    const userNameDisplay = document.getElementById('userNameDisplay');
+    
+    if (user) {
+        authButtons.classList.add('d-none');
+        userDropdown.classList.remove('d-none');
+        userNameDisplay.textContent = user.name;
+    } else {
+        authButtons.classList.remove('d-none');
+        userDropdown.classList.add('d-none');
+    }
+}
+
+function handleLogout() {
+    logout();
+}
+
+// Initialize
+updateAuthUI();
+loadFavorites();
+</script>
+
+<style>
+.favorites-card {
+    background: white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+body.dark-mode .favorites-card {
+    background: #1E293B;
+}
+
+body.dark-mode .list-group-item {
+    background: #1E293B;
+    color: #F8FAFC;
+    border-color: #334155;
+}
+</style>
+
+</body>
+</html>
