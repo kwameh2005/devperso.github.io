@@ -110,57 +110,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Social Media Section -->
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <h5 class="fw-bold mb-4">Suivez-nous sur les réseaux sociaux</h5>
-                    <div class="d-flex justify-content-center gap-3">
-                        <a href="https://facebook.com" target="_blank" class="btn btn-outline-primary btn-lg rounded-circle">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="btn btn-outline-danger btn-lg rounded-circle">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" class="btn btn-outline-info btn-lg rounded-circle">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Section -->
-            <div class="row mt-5">
-                <div class="col-12">
-                    <h4 class="fw-bold mb-4 text-center">Questions Fréquentes</h4>
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item" style="border: none; margin-bottom: 10px;">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                    Comment puis-je commencer sur DévPerso ?
-                                </button>
-                            </h3>
-                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Il suffit de créer un compte gratuitement ! Cliquez sur "Inscription" et suivez les étapes.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item" style="border: none;">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                    Les services sont-ils payants ?
-                                </button>
-                            </h3>
-                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Non, tous nos services sont gratuits !
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -190,10 +139,21 @@ function handleSubmit(event) {
     const email = form.email.value;
     const message = form.message.value;
     
+    // Show success message
     alert(`Merci ${name} ! Ton message a été envoyé. Je te répondrai à ${email} sous 24-48h.`);
     form.reset();
     return false;
 }
+
+const widgetQuotes = [
+    "Tu es capable de grandes choses.",
+    "Chaque jour est une nouvelle opportunité.",
+    "La constance bat le talent.",
+    "Tu mérites le bonheur.",
+    "Continue, tu es sur la bonne voie."
+];
+document.getElementById("widgetQuote").innerText =
+    widgetQuotes[Math.floor(Math.random() * widgetQuotes.length)];
 </script>
 
 </body>
